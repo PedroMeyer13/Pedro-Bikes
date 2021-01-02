@@ -30,7 +30,7 @@ function select_row()
 	})
 };
 
-function delete_row(sec, ent)
+function delete_row(sec, ent) // need to change delete
 {
 	$("#delete").click(function ()
 	{
