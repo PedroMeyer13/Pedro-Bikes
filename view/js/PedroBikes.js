@@ -1,3 +1,5 @@
+// Based on code from our Classes. Mikhail code.
+
 // returns a number that represents the sum of all the selected menu
 // item prices.
 function calculateBill(idMenuTable) {
@@ -26,7 +28,7 @@ function highlightKids(idTable, bShowKids) {
     var oTBODY = oTable.getElementsByTagName('tbody')[0];
     var aTRs = oTBODY.getElementsByTagName('tr');
     // walk through each of the table rows and see if it has a 
-    // "vegetarian" attribute on it.
+    // "Kids" attribute on it.
     for (i = 0; i < aTRs.length; i++) {
         if (aTRs[i].getAttribute('kids') == "true") {
             if (bShowKids) {

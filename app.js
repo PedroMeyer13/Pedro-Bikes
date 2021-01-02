@@ -91,7 +91,6 @@ router.post('/post/delete', function (req, res) {
             if (err) throw (err);
             
             delete result.BikeOptions.section[obj.section].option[obj.option];
-            //BikeOptions.section[obj.section].option[obj.option];
 
             console.log(JSON.stringify(result, null, "  "));
 
