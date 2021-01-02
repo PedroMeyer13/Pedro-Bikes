@@ -66,6 +66,7 @@ router.post('/post/json', function (req, res) {
             
             result.BikeOptions.section[obj.sec_n].option.push({'item': obj.item, 'price': obj.price});
 
+
             console.log(JSON.stringify(result, null, "  "));
 
             jsToXmlFile('PedroBikes.xml', result, function(err){
