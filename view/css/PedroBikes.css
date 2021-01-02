@@ -5,6 +5,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  background-color: aquamarine;
 }
 .footer {
   position: absolute;
@@ -22,7 +23,14 @@ table, th, td {
 }
  table {
      border-collapse: collapse;
+     background-color: beige;
      width:100%;
+}
+
+thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
 }
  td, th {
      border: 1px solid #ced4da;
