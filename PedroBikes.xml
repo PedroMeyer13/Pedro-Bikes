@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-stylesheet type="text/xsl" href="PedroBikes.xsl"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <BikeOptions>
   <section name="Road bikes">
     <option kids="true">
@@ -13,6 +12,10 @@
     <option>
       <item>Boardman ADV 9.0 </item>
       <price>90</price>
+    </option>
+    <option>
+      <item>abc</item>
+      <price>5500</price>
     </option>
   </section>
   <section name="Mountain bikes">

@@ -20,8 +20,7 @@ function calculateBill(idMenuTable) {
 };
 
 function highlightKids(idTable, bShowKids) {
-    // if bShowVeg is true, then we're highlighting vegetarian
-    //	meals, otherwise we're unhighlighting them.
+    // if bShowKids is true, then we're highlighting the bike for kids
     var i = 0;
     var oTable = document.getElementById(idTable);
     var oTBODY = oTable.getElementsByTagName('tbody')[0];
