@@ -13,10 +13,6 @@
       <item>Boardman ADV 9.0 </item>
       <price>90</price>
     </option>
-    <option>
-      <item>abc</item>
-      <price>5500</price>
-    </option>
   </section>
   <section name="Mountain bikes">
     <option kids="true">

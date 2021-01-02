@@ -90,7 +90,8 @@ router.post('/post/delete', function (req, res) {
         xmlFileToJs('PedroBikes.xml', function (err, result) {
             if (err) throw (err);
             
-            delete result.cafemenu.section[obj.section].entree[obj.entree];
+            delete result.BikeOptions.section[obj.section].option[obj.option];
+            //BikeOptions.section[obj.section].option[obj.option];
 
             console.log(JSON.stringify(result, null, "  "));
 
