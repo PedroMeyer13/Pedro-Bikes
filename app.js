@@ -1,4 +1,4 @@
-// Mikhaill Code from the class
+// Code was given in Mikhail class
 
 var http = require('http'), //This module provides the HTTP server functionalities
     path = require('path'), //The path module provides utilities for working with file and directory paths
@@ -60,6 +60,13 @@ router.post('/post/json', function (req, res) {
     function appendJSON(obj) {
 
         console.log(obj)
+        const sanitizeHtml = require('sanitize-html');
+
+        var item = sanitizeHtml.value(obj.item, 'string');
+        var price= sanitizeHtml.value(obj.price, 'string');
+
+        var item = sanitizeHtml.value(obj.item, 'string');
+        var price= sanitizeHtml.value(obj.price, 'string');
 
         xmlFileToJs('PedroBikes.xml', function (err, result) {
             if (err) throw (err);
