@@ -63,6 +63,9 @@ router.post('/post/json', function (req, res) {
 
         xmlFileToJs('PedroBikes.xml', function (err, result) {
             if (err) throw (err);
+
+             var validatae = obj.price;
+             if(validNumber(validatae)==true){
             
             result.BikeOptions.section[obj.sec_n].option.push({'item': obj.item, 'price': obj.price});
 
@@ -72,6 +75,7 @@ router.post('/post/json', function (req, res) {
             jsToXmlFile('PedroBikes.xml', result, function(err){
                 if (err) console.log(err);
             });
+        }
         });
     };
 
@@ -105,6 +109,14 @@ router.post('/post/delete', function (req, res) {
     res.redirect('back');
 
 });
+
+function validNumber(str) {
+   //based on code from Stack overflow
+
+  if (typeof str != "string") return false // we only process strings!  
+  return !isNaN(str) && // use type coercion to parse the entirety of the string (`parseFloat` alone does not do this)...
+         !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
+} 
 
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function () {
     var addr = server.address();
