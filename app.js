@@ -1,4 +1,4 @@
-// Code was given in Mikhail class
+// Code was based on the code given in Mikhail class
 
 var http = require('http'), //This module provides the HTTP server functionalities
     path = require('path'), //The path module provides utilities for working with file and directory paths
@@ -65,9 +65,12 @@ router.post('/post/json', function (req, res) {
             if (err) throw (err);
 
              var validatae = obj.price;
+             var saniInput = obj.item;
+             saniInput = sanitizeString(saniInput);
+             
              if(validNumber(validatae)==true){
             
-            result.BikeOptions.section[obj.sec_n].option.push({'item': obj.item, 'price': obj.price});
+            result.BikeOptions.section[obj.sec_n].option.push({'item': saniInput, 'price': validatae});
 
 
             console.log(JSON.stringify(result, null, "  "));
@@ -109,6 +112,12 @@ router.post('/post/delete', function (req, res) {
     res.redirect('back');
 
 });
+
+// Code from stack overflow
+function sanitizeString(str){
+    str = str.replace(/[^a-z0-9áéíóúñü \.,_-]/gim,"");
+    return str.trim();
+}
 
 function validNumber(str) {
    //based on code from Stack overflow
